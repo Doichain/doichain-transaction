@@ -57,7 +57,25 @@ module.exports = {
       'OP_EQUALVERIFY',
       'OP_CHECKSIG'
     ].join(' ');
-  }  
+  },
+  nameDoi: function(name, value, address){
+    name = conv(name, {in: 'binary', out:'hex'});
+    value = conv(value, {in: 'binary', out:'hex'});
+    address = base58.decode(address).toString('hex').substr(2, 40);
+
+    return [
+      "10",
+      name,
+      value,
+      'OP_2DROP',
+      'OP_DROP',
+      'OP_DUP',
+      'OP_HASH160',
+      address,
+      'OP_EQUALVERIFY',
+      'OP_CHECKSIG'
+    ].join(' ');
+  }   
 };
 
 

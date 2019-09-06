@@ -1,7 +1,7 @@
 {
-  "name": "namecoin-transaction",
-  "version": "0.0.1",
-  "description": "Create namecoin transactions",
+  "name": "doichain-transaction",
+  "version": "0.0.2",
+  "description": "Create doichain transactions",
   "main": "main.js",
   "scripts": {
     "test": "node test.js"
@@ -13,9 +13,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/mariusGundersen/namecoin-transaction"
+    "url": "git://github.com/doichain/doichain-transaction"
   },
-  "author": "Marius Gundersen",
+  "author": "Marius Gundersen, Nico Krause",
   "license": "MIT",
   "dependencies": {
     "binstring": "^0.2.1",
