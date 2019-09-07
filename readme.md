@@ -1,11 +1,11 @@
 # namecoin-transaction
 
-Create the three standard [namecoin transactions](https://wiki.namecoin.info/index.php?title=Client_API#Identifier_Registration). 
+Create the three standard [doichain transactions](https://wiki.namecoin.info/index.php?title=Client_API#Identifier_Registration). 
 
 ## Installation
 
 ```
-npm install --save namecoin-transaction
+npm install --save doichain-transaction
 ```
 
 ## Usage
@@ -13,6 +13,11 @@ npm install --save namecoin-transaction
 ### `newName(name, random, address)`
 
 Preorder a `name` and transfer the ownership to `address`. For example:
+
+```js
+namecoinTransaction.nameDoi('d/raid', JSON.stringify({signature:...,doiSignature:...}')
+//3 642f72616964 7b226970223a223231322e3233322e35312e3936222c226d6170223a7b222a223a223231322e3233322e35312e3936227d2c22656d61696c223a226e616d65636f696e406d61696c2e636f6d227d OP_2DROP OP_DROP OP_DUP OP_HASH160 7d1547a461df0e192b1ee884ae510f0a0bf685d3 OP_EQUALVERIFY OP_CHECKSIG'
+```
 
 ```js
 namecoinTransaction.newName('d/raid', '467e5b41d4bcb8c100', 'N2c1SDkTsPUiWsrtTxFUG32umhmKp3kdpo')
